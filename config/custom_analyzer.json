@@ -1,0 +1,30 @@
+{
+    "description": "My custom analyzer for extracting customer name and item details",
+    "baseAnalyzerId": "prebuilt-documentAnalyzer",
+    "config": {
+        "returnDetails": true,
+        "enableFormula": false,
+        "disableContentFiltering": false,
+        "estimateFieldSourceAndConfidence": true,
+        "tableFormat": "html"
+    },
+    "fieldSchema": {
+        "fields": {
+            "customer": {
+                "type": "string",
+                "method": "extract",
+                "description": "Customer name"
+            },
+            "total": {
+                "type": "string",
+                "method": "extract",
+                "description": "Total amount to pay"
+            },
+            "language": {
+                "type": "string",
+                "method": "extract",
+                "description": "Document language"
+            }
+        }
+    }
+}
