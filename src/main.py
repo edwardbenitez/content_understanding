@@ -47,7 +47,11 @@ def main():
         timeout_seconds=60 * 60,
         polling_interval_seconds=1,
     )
-    json.dump(result, sys.stdout, indent=2)
+    #json.dump(result, sys.stdout, indent=2)
+    
+    for i in result["result"]["contents"][0]["fields"]:
+        print(f"============={i}==================")
+        print(result["result"]["contents"][0]["fields"][i])
 
 
 @dataclass(frozen=True, kw_only=True)

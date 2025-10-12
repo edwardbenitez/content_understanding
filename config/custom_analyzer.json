@@ -22,7 +22,7 @@
             },
             "language": {
                 "type": "string",
-                "method": "extract",
+                "method": "generate",
                 "description": "Document language"
             }
         }
