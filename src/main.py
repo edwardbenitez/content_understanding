@@ -49,11 +49,12 @@ def main():
     )
     #json.dump(result, sys.stdout, indent=2)
     
-    for i in result["result"]["contents"][0]["fields"]:
-        print(f"============={i}==================")
-        print(result["result"]["contents"][0]["fields"][i])
-
-
+    # for i in result["result"]["contents"][0]["fields"]:
+    #     print(f"============={i}==================")
+    #     print(result["result"]["contents"][0]["fields"][i])
+    print(f"=============Request ID==================")
+    print(result["id"])
+    
 @dataclass(frozen=True, kw_only=True)
 class Settings:
     endpoint: str
